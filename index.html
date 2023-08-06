@@ -17,12 +17,14 @@
     <p id="loading-opencv-msg">Loading opencv.js</p>
 
     <input type="file" id="file-upload"/>
-    <button onclick="convert()"> Convert</button>
+    <button onclick="convert()">Ausmalbild erstellen</button>
+    <button onclick="share()">Ausmalbild teilen</button>
   </div>
 
   <div class="row-align">
     <img id="src-image" src="" alt="">
-    <canvas id="the-canvas" width="300"/>
+    <img id="dst-image" src="" alt="">
+    <canvas id="the-canvas" width="300" hidden/>
   </div>
   <div class="slidecontainer">
     <input id="blockSizeInput" type="range" min="3" max="111" step="2" />
