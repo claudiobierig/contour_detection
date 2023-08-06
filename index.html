@@ -12,31 +12,41 @@
 </head>
 
 <body>
-
-<div>
-    <p id="loading-opencv-msg">Loading opencv.js</p>
-
-    <input type="file" id="file-upload"/>
-  </div>
-
-  <div class="row-align">
-    <img id="src-image" src="" alt="">
-    <img id="dst-image" src="" alt="">
-    <canvas id="the-canvas" width="300" hidden/>
-  </div>
-  <div class="slidecontainer">
-    <input id="blockSizeInput" type="range" min="3" max="111" step="2" />
-    <p>Block Size: <output id="blockSize"></output></p>
-
-  </div>
-  <div class="slidecontainer">
-    <input id="cInput" type="range" min="0" max="100" step="1" />
-    <p>C: <output id="c"></output></p>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/gh/wallat/compiled-opencvjs/v4.2.0/opencv.js" async onload="onOpenCvReady();" type="text/javascript"></script>
-
-  <script src="contour.js"></script>
+<div class="container">
+    <div class="row">
+        <div class="col" id="loading-opencv-msg">Loading opencv.js</div>
+    </div>
+</div>
+<div class="container" id="root" hidden> 
+    <div class="row">
+        <div class="col">
+            <input type="file" id="file-upload"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" class="contourcol">
+            <img id="src-image" class="img-fluid" src="" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img id="dst-image" class="img-fluid" src="" alt="">
+            <canvas id="the-canvas" width="300" hidden/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input id="blockSizeInput" type="range" min="3" max="111" step="2"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input id="cInput" type="range" class="form-range" min="0" max="100" step="1" />
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/wallat/compiled-opencvjs/v4.2.0/opencv.js" async onload="onOpenCvReady();" type="text/javascript"></script>
+<script src="contour.js"></script>
 
 </body>
 

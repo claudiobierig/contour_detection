@@ -13,22 +13,23 @@ srcImgEl.onload = function () {
 
 // opencv loaded?
 window.onOpenCvReady = function () {
-    document.getElementById('loading-opencv-msg').remove();
+    document.getElementById('loading-opencv-msg').hidden = true
+    document.getElementById("root").hidden = false
 }
 
-const valueBlockSize = document.getElementById("blockSize");
+//const valueBlockSize = document.getElementById("blockSize");
 const inputBlockSize = document.getElementById("blockSizeInput");
-valueBlockSize.textContent = inputBlockSize.value;
+//valueBlockSize.textContent = inputBlockSize.value;
 inputBlockSize.addEventListener("input", (event) => {
-    valueBlockSize.textContent = event.target.value;
+    //valueBlockSize.textContent = event.target.value;
     convert()
 });
 
 const inputC = document.getElementById("cInput");
-const valueC = document.getElementById("c");
-valueC.textContent = inputC.value;
+//const valueC = document.getElementById("c");
+//valueC.textContent = inputC.value;
 inputC.addEventListener("input", (event) => {
-    valueC.textContent = event.target.value;
+    //valueC.textContent = event.target.value;
     convert()
 });
 
