@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Contour Detection</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="contour.css" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+</head>
+
+<body>
+
+<div>
+    <p id="loading-opencv-msg">Loading opencv.js</p>
+
+    <input type="file" id="file-upload"/>
+    <button onclick="convert()"> Convert</button>
+  </div>
+
+  <div class="row-align">
+    <img id="src-image" src="" alt="">
+    <canvas id="the-canvas" width="300"/>
+  </div>
+  <div class="slidecontainer">
+    <input id="blockSizeInput" type="range" min="3" max="111" step="2" />
+    <p>Block Size: <output id="blockSize"></output></p>
+
+  </div>
+  <div class="slidecontainer">
+    <input id="cInput" type="range" min="0" max="100" step="1" />
+    <p>C: <output id="c"></output></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/gh/wallat/compiled-opencvjs/v4.2.0/opencv.js" async onload="onOpenCvReady();" type="text/javascript"></script>
+
+  <script src="contour.js"></script>
+
+</body>
+
+</html>
